@@ -1,0 +1,4 @@
+# Simple IDPS Requirements
+# Only genuine external dependencies are listed here.
+# Detector, FirewallController, and Demo use Python Standard Library only.
+scapy>=2.5.0

@@ -1,0 +1,27 @@
+# ==============================================================================
+# Simple IDPS - Trusted IP Allowlist
+# ==============================================================================
+# IP addresses listed in this file will NEVER be blocked by the firewall,
+# even if malicious behavior or anomalous traffic is observed from them.
+#
+# HOW TO FIND YOUR ACTUAL LOCAL NETWORK ADDRESSES ON WINDOWS:
+# 1. Open PowerShell or Command Prompt.
+# 2. Run the command:
+#        ipconfig /all
+# 3. Locate your active network adapter (e.g., "Wireless LAN adapter Wi-Fi"):
+#    - "Default Gateway . . . . . . . . : 192.168.1.1"   <- Your router/gateway IP
+#    - "DNS Servers . . . . . . . . . . : 192.168.1.1"   <- Your DNS resolver
+#    - "IPv4 Address . . . . . . . . . : 192.168.1.50"  <- Your laptop IP (already protected automatically)
+#
+# IMPORTANT:
+# - Do not guess IP addresses. Use the real values discovered above.
+# - Place one IPv4 address per line.
+# - Blank lines and comments starting with '#' are ignored.
+#
+# ------------------------------------------------------------------------------
+# Examples (Uncomment and replace with your actual trusted IPs):
+# ------------------------------------------------------------------------------
+# 192.168.1.1      # Example: Local Default Gateway / Router
+# 1.1.1.1          # Example: Cloudflare Public DNS
+# 8.8.8.8          # Example: Google Public DNS
+# 192.168.1.200    # Example: Trusted local server or admin laptop

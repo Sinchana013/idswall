@@ -1,0 +1,32 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Testing and coverage
+.pytest_cache/
+.coverage
+htmlcov/
+*.log
+simple_idps.log
+
+# IDE and Editor settings
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS artifacts
+Thumbs.db
+Desktop.ini
+.DS_Store

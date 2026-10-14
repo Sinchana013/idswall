@@ -1,0 +1,7 @@
+# Ignore python caches and venvs
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.log
+simple_idps.log
