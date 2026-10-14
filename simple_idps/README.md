@@ -269,16 +269,4 @@ netsh advfirewall firewall delete rule name="SimpleIDPS-Block-198.51.100.55"
 
 # 4. Remove all SimpleIDPS rules:
 netsh advfirewall firewall delete rule name="SimpleIDPS-Block-*"
-```
-
----
-
-## 10. Important Limitations & False Positives
-
-1. **Wi-Fi Promiscuous Mode Limitations:** On standard Wi-Fi, wireless adapters in station mode only receive broadcast/multicast traffic and unicast frames addressed to their own MAC. Your laptop cannot see unicast traffic between other independent devices on the same Wi-Fi.
-2. **ARP Anomaly Visibility:** Detecting ARP spoofing requires being on the same local Layer 2 broadcast domain (Ethernet or Wi-Fi link). ARP traffic is not routable across Layer 3 subnets.
-3. **Encrypted Traffic Payloads:** An IDS operating at Layer 3/Layer 4 cannot inspect encrypted payloads (e.g., HTTPS, SSH). An SSH brute-force attack cannot be detected by packet content alone; it requires host authentication logs or connection frequency heuristics.
-4. **Heuristic Detection Scope:** The port-scan detection rule is tuned specifically for incoming TCP SYN probes directed to the host. UDP scans and distributed slow scans (e.g., 1 probe every 10 minutes) require specialized heuristic engines.
-5. **Host vs Network Enforcement:** Windows Defender Firewall operates on the local Windows Filtering Platform (WFP). It can only drop packets destined for or originating from *this host*. It cannot act as a perimeter firewall for other computers on the LAN.
-6. **Privilege Requirements:** Modifying Windows Defender Firewall and capturing raw link-layer frames require elevated Windows Administrator permissions.
-7. **Offline Demo Scope:** `demo.py` verifies detection algorithms, response policies, and rule expiration; it does not replace live network packet testing.
+`
